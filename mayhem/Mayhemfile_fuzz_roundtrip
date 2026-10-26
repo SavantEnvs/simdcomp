@@ -1,0 +1,9 @@
+project: savantenvs/simdcomp
+target: fuzz_roundtrip
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_roundtrip/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_roundtrip
+    libfuzzer: true
+    timeout: 10
